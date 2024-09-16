@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://byvj7v3gckdtu"]
+
+[ext_resource type="Texture2D" uid="uid://ktbwckpnwub1" path="res://assets/Wallpapers/Wood.png" id="1_ru8cs"]
+[ext_resource type="Texture2D" uid="uid://dv7cps4lk8eay" path="res://assets/Objects/Box.png" id="2_jcev4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2t3qm"]
+size = Vector2(70, 69)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ow004"]
+size = Vector2(800, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bh8tv"]
+size = Vector2(101, 99)
+
+[node name="Mundo" type="Node2D"]
+
+[node name="Trunk" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trunk"]
+position = Vector2(601, 237)
+shape = SubResource("RectangleShape2D_2t3qm")
+
+[node name="Wood" type="Sprite2D" parent="."]
+position = Vector2(400, 300)
+texture = ExtResource("1_ru8cs")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(400, 598.5)
+shape = SubResource("RectangleShape2D_ow004")
+
+[node name="Box" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box"]
+position = Vector2(423.5, 547.5)
+shape = SubResource("RectangleShape2D_bh8tv")
+
+[node name="img" type="Sprite2D" parent="Box"]
+position = Vector2(424, 546)
+texture = ExtResource("2_jcev4")

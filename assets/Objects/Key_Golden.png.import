@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tt3juuuiypjh"
-path="res://.godot/imported/trunk.png-577c7490aa32f990c173860d0148d982.ctex"
+uid="uid://ds74c1puewxqy"
+path="res://.godot/imported/Key_Golden.png-667fddfe8ec80fa7ab5986f2f21998a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Objects/trunk.png"
-dest_files=["res://.godot/imported/trunk.png-577c7490aa32f990c173860d0148d982.ctex"]
+source_file="res://assets/Objects/Key_Golden.png"
+dest_files=["res://.godot/imported/Key_Golden.png-667fddfe8ec80fa7ab5986f2f21998a4.ctex"]
 
 [params]
 

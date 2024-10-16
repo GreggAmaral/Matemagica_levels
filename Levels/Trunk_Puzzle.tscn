@@ -1,5 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://byvj7v3gckdtu"]
 
+[ext_resource type="Script" path="res://scripts/World.gd" id="1_6b8qr"]
 [ext_resource type="Texture2D" uid="uid://ktbwckpnwub1" path="res://assets/Wallpapers/Wood.png" id="1_ru8cs"]
 [ext_resource type="Texture2D" uid="uid://dv7cps4lk8eay" path="res://assets/Objects/Box.png" id="2_jcev4"]
 [ext_resource type="Texture2D" uid="uid://de8uy1hig33pf" path="res://assets/Objects/Trunk_ani.png" id="3_djs6e"]
@@ -7,46 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://ds74c1puewxqy" path="res://assets/Objects/Key_Golden.png" id="5_orjwo"]
 [ext_resource type="Texture2D" uid="uid://7sa2f1gkjpae" path="res://assets/Objects/Key_Silver.png" id="6_si6de"]
 [ext_resource type="Texture2D" uid="uid://ciltfqh56wvgy" path="res://assets/Objects/Lock.png" id="7_u3l6a"]
-
-[sub_resource type="GDScript" id="GDScript_yfltt"]
-script/source = "extends Node2D
-
-@onready var timer := $Text_Timer
-@onready var label := $Label
-@onready var keys := $Keys
-@onready var anwser := $Keys/Lock/LineEdit
-@onready var Trunk := $Trunk
-
-var line = 0
-var dialogo = [
-	\"Hum... veja so o que encontramos na floresta, um bau encantado! \",
-	\"*som tentando abrir o bau *\",
-	\"Ele parece estar trancado, deve guardar algo muito valioso...\",
-	\"Mas veja só, tem 4 chaves e uma messagem perto dele\",
-	\"A mensagem diz que apenas a chave certa abrira o bau\",
-	\"caso a chave errada seja usada 3 vezes, o bau ira se destruir!\",
-	\"para abrirmos o bau, devemos usar a chave que contem uma expressao\",
-	\"de mesmo valor que no cadeado do bau\",
-]
-
-func _ready():
-	timer.start()
-	print (\"comecou\")
-
-func _on_line_edit_text_submitted(new_text):
-	if anwser.text == \"3\":
-		Trunk.play(\"Open\")
-		
-
-func _on_timer_timeout():
-	if line <= dialogo.size()-1 :
-		label.text = dialogo[line]
-		line += 1
-	else:
-		label.text = \" \"
-		timer.autostart = false 
-		keys.visible = true
-"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ow004"]
 size = Vector2(800, 3)
@@ -108,7 +69,7 @@ animations = [{
 }]
 
 [node name="Mundo" type="Node2D"]
-script = SubResource("GDScript_yfltt")
+script = ExtResource("1_6b8qr")
 
 [node name="Wood" type="Sprite2D" parent="."]
 position = Vector2(400, 300)

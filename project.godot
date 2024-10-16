@@ -14,10 +14,6 @@ config/name="TCC"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-DialogueManager="*res://scripts/dialogue_manager.gd"
-
 [display]
 
 window/size/viewport_width=800
